@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}signup{% endblock title %}
+{% block content %}
+
+<div style="height:100px"></div>
+<section class=" vh-100">
+    <div class="container h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body  p-md-5">
+              <h3 class="mb-3  pb-md-0 mb-md-5">Create An Account</h3>
+              <form method = "POST" action=".">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-md-12 ">
+                    <div class="form-outline">
+                      {{form.username}} <br>
+                      {% comment %} <input type="email" id="" class="form-control form-control-lg" /> {% endcomment %}
+                      <label class="form-label" for="">User Name</label>
+                    </div>
+  
+                    <div class="form-outline">
+                      {{form.email}} <br>
+                      {% comment %} <input type="email" id="" class="form-control form-control-lg" /> {% endcomment %}
+                      <label class="form-label" for="">Email</label>
+                    </div>
+  
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12  pb-2">
+                    <div class="form-outline">
+                      {{form.password1}} <br>
+                      {% comment %} <input type="password" id="" class="form-control form-control-lg" /> {% endcomment %}
+                      <label class="form-label" for="">Password</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12  pb-2">
+                    <div class="form-outline">
+                      {{form.password2}} <br>
+                      {% comment %} <input type="password" id="" class="form-control form-control-lg" /> {% endcomment %}
+                      <label class="form-label" for="">Confirm Password</label>
+                    </div>
+                  </div>
+                </div>
+                <p>Please select a catagory:</p>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Freelancer
+                  <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Buyer
+                  <label class="form-check-label" for="radio2"></label>
+                </div>
+                <div class="form-check d-flex align-items-center ">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                    <label class="form-check-label" for="form2Example3g">
+                      I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                    </label>
+                  </div>
+                <div class="mt-3 mb-4">
+                  <input class="btn btn-secondary btn-lg" type="submit" value="Sign Up" />
+                  {{form.errors}}
+                </div>
+                <hr>
+               
+                <p class="text-muted">Have already an account? <a href="/login/"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+              </form>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- background shapes -->
+<img class="pricing-bg-shape-1 up-down-animation" src="{%static 'images/background-shape/seo-ball-1.png'%}" alt="background-shape">
+<img class="pricing-bg-shape-2 up-down-animation" src="{%static 'images/background-shape/seo-half-cycle.png'%}" alt="background-shape">
+<img class="pricing-bg-shape-3 left-right-animation" src="{%static 'images/background-shape/team-bg-triangle.png'%}" alt="background-shape">
+<img class="team-bg-shape-4 up-down-animation img-fluid" src="{%static 'images/background-shape/team-bg-dots.png'%}" 
+alt="background-shape">
+<img class="seo-bg-shape-3 left-right-animation" src="{%static 'images/background-shape/seo-ball-2.png'%}" alt="bg-shape">
+
+  </section>
+
+
+
+
+
+
+
+{% endblock %}

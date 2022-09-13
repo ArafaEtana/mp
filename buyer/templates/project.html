@@ -1,0 +1,73 @@
+{% extends 'buyer_base.html' %}
+{% load static %}
+{% block content %}
+
+<Main role="main" class="main-content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <section class="container ">
+       <div>
+        <div class="d-flex justify-content-between">
+            <div>
+                <h3>Project</h3>
+            </div>
+            <div >
+                <a class="btn btn-primary ml-lg-3 primary-shadow " href="#">As a Client</a>
+                <a class="btn btn-primary ml-lg-3 primary-shadow " href="myProjectsFreelancer.html">As a Freelancer</a>    
+            </div>
+        </div>
+        <div>
+          <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link basic_solid_color " aria-current="page" href="/buyer/projects/">Post a job</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="/buyer/projects/allProjects/">Work in progress</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="">Past projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="">All projects</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          </div>
+       </div>
+      <div style="height: 50px">
+
+      </div>
+       <div style="height: 300px;" class="bg-light basic_border d-flex justify-content-center align-items-center">
+           <div>
+               <h5 class="ps-5 text-center">Create a new projects</h5> 
+               <p classs="text-center" >Millions of talented freelancers are ready to help you do amazing things.</p><br>
+               <div class="d-flex justify-content-center">
+                <a href="/buyer/projects/postProjects/" class="btn btn-primary ml-lg-3 primary-shadow">Post A Project</a>
+               </div>
+           </div>
+       </div>
+
+    </section>
+    </div>
+    </div>
+    <img class="img-fluid hero-bg-2 left-right-animation" src=" {%static 'images/background-shape/seo-ball-1.png'%}" alt="">
+    <img class="img-fluid hero-bg-3 left-right-animation" src="{%static 'images/background-shape/seo-half-cycle.png'%}" alt="">
+    <img class="img-fluid hero-bg-4 up-down-animation" src="{%static 'images/background-shape/green-dot.png'%}" alt="">
+    <img class="img-fluid hero-bg-5 left-right-animation" src="{%static 'images/background-shape/blue-half-cycle.png'%}" alt="">
+    <img class="img-fluid hero-bg-6 up-down-animation" src="{%static 'images/background-shape/seo-ball-1.png'%}" alt="">
+
+
+</Main>
+
+
+
+
+{% endblock content %}

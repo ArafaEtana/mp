@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}login{% endblock title %}
+{% block content %}
+
+<section class="mt-5 vh-100">
+    <div class="container h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Login</h3>
+              {% for message in messages%}
+              <p id= "messages">{{message}}</p>
+
+              {%endfor%}
+              <form method="POST" action ="">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-md-12 mb-4">
+  
+                    <div class="form-outline">
+                      <input type="text" id="" name="username" class="form-control form-control-lg" />
+                      <label class="form-label" for="">Username</label>
+                    </div>
+  
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 pb-2">
+                    <div class="form-outline">
+                      <input type="password" name='password' id="" class="form-control form-control-lg" />
+                      <label class="form-label" for="">Password</label>
+                    </div>
+                  </div>
+                </div>
+                <a href="#!"class="fw-bold text-body"><u>Forgot password?</u></a>
+                <div class="mt-4 pt-2">
+                  <input class="btn btn-secondary btn-lg" type="submit" value="login" />
+                </div>
+              </form>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- background shapes -->
+<img class="pricing-bg-shape-1 up-down-animation" src="{%static 'images/background-shape/seo-ball-1.png'%}" alt="background-shape">
+<img class="pricing-bg-shape-2 up-down-animation" src="{%static 'images/background-shape/seo-half-cycle.png'%}" alt="background-shape">
+<img class="pricing-bg-shape-3 left-right-animation" src="{%static 'images/background-shape/team-bg-triangle.png'%}" alt="background-shape">
+<img class="team-bg-shape-4 up-down-animation img-fluid" src="{%static 'images/background-shape/team-bg-dots.png'%}" 
+alt="background-shape">
+<img class="seo-bg-shape-3 left-right-animation" src="{%static 'images/background-shape/seo-ball-2.png'%}" alt="bg-shape">
+
+  </section>
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'buyer_base.html' %}
+{% load static %}
+{% block content %}
+<main role="main" class="main-content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+            <ul>
+            {%for project in project_list%}
+            <li>{{project}}</li> 
+            {%endfor%}
+            </ul>
+        </div>
+      </div>
+    </div>
+<main>
+
+
+
+
+{% endblock content %}
+
+
