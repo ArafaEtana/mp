@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from .forms import UserCreationForm , SignUpForm
 from django.contrib.auth import authenticate,login, logout
 from django.contrib import messages
+from buyer.views import allProjects
+from buyer.models import postJob
+from django.contrib.auth.models import User
 
 
 from .forms import SignUpForm
@@ -13,10 +16,16 @@ def home(request):
 
 
 def findFreelancer(request):
-    return render (request,'findFreelancer.html')
+    
+    user_list=User.objects.all()
+    context={'user_list':user_list}
+    return render (request,'findFreelancer.html',context)
 
 def findJobs(request):
-    return render(request, 'findJobs.html')
+    project_list=postJob.objects.all()
+
+    context={'project_list':project_list}
+    return render(request, 'findJobs.html',context)
 
 def resources(request):
     return render(request, 'resources.html')
